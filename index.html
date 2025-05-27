@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Contoh Logo" class="logo">
+                <h1>Contoh.</h1>
+            </div>
+            <nav>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="nav-menu">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2 class="fade-in">Innovative IT Solutions for Your Future</h2>
+            <p class="fade-in">Discover top-tier website and mobile app development, powered by Grok's cutting-edge technology.</p>
+            <a href="#services" class="cta-button fade-in">Explore Services</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg" alt="Website Design">
+                    <h3>Website Maker</h3>
+                    <p>Create stunning, responsive websites tailored to your brand with modern design and seamless functionality.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg" alt="Mobile App">
+                    <h3>Mobile Application Maker</h3>
+                    <p>Build powerful, user-friendly mobile apps for iOS and Android, designed to engage and perform.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="IT Education">
+                    <h3>School or College IT Tasks</h3>
+                    <p>Expert assistance for IT projects, coding assignments, and academic tasks to help you excel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Contoh. transformed our online presence with a sleek website that boosted our brand!"</p>
+                    <h4>Jane Doe, CEO</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Their mobile app development was top-notch, delivering exactly what we needed."</p>
+                    <h4>John Smith, Founder</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Contoh, we specialize in delivering high-quality IT solutions. Our team combines creativity and technology, utilizing tools like Grok to bring your ideas to life. Whether it's a website, mobile app, or academic project, we're here to make it happen.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Ready to start your next project? Reach out to us today!</p>
+            <a href="mailto:info@contoh.com" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Contoh. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

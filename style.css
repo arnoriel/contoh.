@@ -1,0 +1,282 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 50px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #333333;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 2px 0;
+    transition: all 0.3s;
+}
+
+#hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #333333;
+    transform: scale(1.05);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#services, #testimonials, #about, #contact {
+    padding: 80px 0;
+}
+
+#services h2, #testimonials h2, #about h2, #contact h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.service-grid, .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card, .testimonial-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover, .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-card h3, .testimonial-card h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-card p, .testimonial-card p {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #000000;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #333333;
+}
+
+@media (max-width: 768px) {
+    #hero h2 {
+        font-size: 32px;
+    }
+
+    #hero p {
+        font-size: 16px;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-container {
+        flex-shrink: 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 20px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .service-card img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h2 {
+        font-size: 24px;
+    }
+
+    #hero p {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #services h2, #testimonials h2, #about h2, #contact h2 {
+        font-size: 28px;
+    }
+
+    .logo-container {
+        gap: 5px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
